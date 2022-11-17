@@ -3,14 +3,16 @@ package com.github.iveina2021.automationexercises;
 // page_url = https://automationexercise.com/account_created/
 
 
-import org.openqa.selenium.WebElement;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AccountCreatedPage {
-    @FindBy(css = "b")
-    public WebElement accountCreated;
 
-    public void checkAccountCreated() {
-        accountCreated.isDisplayed();
+    @FindBy(css = ".title")
+    public SelenideElement accountCreatedLabel;
+
+    public void checkAccountCreatedLabelIsVisible() {
+        accountCreatedLabel.should(Condition.exist);
     }
 }

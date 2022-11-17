@@ -5,15 +5,13 @@ package com.github.iveina2021.automationexercises;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.UUID;
-
 import static com.codeborne.selenide.Selenide.page;
 
 public class SignUpPage {
-    @FindBy(css = "html > body > section > div > div > div > div:nth-of-type(1) > h2 > b")
+    @FindBy(css = ".login-form > .title")
     public SelenideElement enterAccountInformationLabel;
 
-    @FindBy(css = "#id_gender1")
+    @FindBy(css = "input[value='Mr']")
     public SelenideElement genderCheckboxMr;
 
     @FindBy(css = "input[id='password']")
@@ -57,7 +55,6 @@ public class SignUpPage {
 
     @FindBy(css = "input[id='address1']")
     public SelenideElement addressInput;
-
 
     @FindBy(css = "input[id='address2']")
     public SelenideElement addressTwoInput;
@@ -109,28 +106,27 @@ public class SignUpPage {
         addressTwoLabel.scrollIntoView(true);
     }
 
-    public AccountCreatedPage fillEnterAccountInformationForm() {
+    public AccountCreatedPage fillEnterAccountInformationForm(String password, String firstName, String lastName, String company, String address, String addressTwo, String state, String city, String zipcode, String mobileNumber) {
         genderCheckboxMr.click();
-        passwordInput.setValue("123" + UUID.randomUUID());
+        passwordInput.setValue(password);
         scrollToDateOfBirthLabel();
         selectDateOfBirth();
         newsletterCheckbox.click();
         receiveSpecialOffersCheckbox.click();
 
-        firstNameInput.setValue("Leonard");
-        lastNameInput.setValue("Hofstadter");
-        companyInput.setValue("Big Bang Theory Inc");
-        addressInput.setValue("Abbey Road, 1");
+        firstNameInput.setValue(firstName);
+        lastNameInput.setValue(lastName);
+        companyInput.setValue(company);
+        addressInput.setValue(address);
         scrollToAddressTwoLabel();
-        addressTwoInput.setValue("Abbey Road, 2");
+        addressTwoInput.setValue(addressTwo);
         selectCountryDropDown.click();
         getCountryCanada.click();
-        stateInput.setValue("Ontario");
-        cityInput.setValue("Toronto");
-        zipcodeInput.setValue("123456");
-        mobileNumberInput.setValue("123456789");
+        stateInput.setValue(state);
+        cityInput.setValue(city);
+        zipcodeInput.setValue(zipcode);
+        mobileNumberInput.setValue(mobileNumber);
         createAccountButton.click();
-
         return page(AccountCreatedPage.class);
     }
 }
