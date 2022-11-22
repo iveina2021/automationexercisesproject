@@ -1,10 +1,9 @@
-package com.github.iveina2021.automationexercises;
+package com.github.iveina2021.page;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
-
-import static com.codeborne.selenide.Selenide.page;
 
 // page_url = https://automationexercise.com/login/
 
@@ -29,6 +28,6 @@ public class LoginPage {
         nameInput.setValue(name);
         emailInput.setValue(email);
         signupButton.click();
-        return page(SignUpPage.class);
+        return Selenide.page(SignUpPage.class);
     }
 }

@@ -1,4 +1,4 @@
-package com.github.iveina2021.automationexercises;
+package com.github.iveina2021.page;
 
 // page_url = https://automationexercise.com/account_created/
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class AccountCreatedPage {
 
-    @FindBy(css = ".title")
+    @FindBy(css = "h2[data-qa='account-created']")
     public SelenideElement accountCreatedLabel;
 
     public void checkAccountCreatedLabelIsVisible() {
