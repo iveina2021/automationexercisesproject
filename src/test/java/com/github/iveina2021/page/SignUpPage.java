@@ -78,20 +78,20 @@ public class SignUpPage {
         enterAccountInformationLabel.should(Condition.exist);
     }
 
-    public void selectDateOfBirth() {
+    public void selectDateOfBirth(String day, String month, String year) {
         daysDropDown.click();
-        getDaysSelectOption("2").click();
+        getDaysSelectOption(day).click();
 
         monthsDropDown.click();
-        getMonthsSelectOption("4").click();
+        getMonthsSelectOption(month).click();
 
         yearsDropDown.click();
-        getYearsSelectOption("2015").click();
+        getYearsSelectOption(year).click();
     }
 
-    public void selectCountry() {
+    private void selectCountry(String country) {
         selectCountryDropDown.click();
-        getCountriesSelectOption("Canada").click();
+        getCountriesSelectOption(country).click();
     }
 
     public SelenideElement getDaysSelectOption(String day) {
@@ -116,11 +116,15 @@ public class SignUpPage {
     }
 
     public AccountCreatedPage fillEnterAccountInformationForm(String password,
+                                                              String day,
+                                                              String month,
+                                                              String year,
                                                               String firstName,
                                                               String lastName,
                                                               String company,
                                                               String address,
                                                               String addressTwo,
+                                                              String country,
                                                               String state,
                                                               String city,
                                                               String zipcode,
@@ -128,7 +132,7 @@ public class SignUpPage {
         gender1Checkbox.click();
         passwordInput.setValue(password);
         scrollToDateOfBirthLabel();
-        selectDateOfBirth();
+        selectDateOfBirth(day, month, year);
         newsletterCheckbox.click();
         receiveSpecialOffersCheckbox.click();
 
@@ -138,7 +142,7 @@ public class SignUpPage {
         addressInput.setValue(address);
         scrollToAddressTwoLabel();
         addressTwoInput.setValue(addressTwo);
-        selectCountry();
+        selectCountry(country);
         stateInput.setValue(state);
         cityInput.setValue(city);
         zipcodeInput.setValue(zipcode);

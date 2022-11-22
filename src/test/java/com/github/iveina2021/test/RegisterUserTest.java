@@ -27,11 +27,12 @@ public class RegisterUserTest {
                 UUID.randomUUID() + "@gmail.com");
         signUpPage.checkEnterAccountInformationLabelIsVisible();
         AccountCreatedPage accountCreatedPage = signUpPage.fillEnterAccountInformationForm(UUID.randomUUID() + "123",
-                "Leonard",
+                "2", "4", "2015", "Leonard",
                 "Hofstedter",
                 "Big Bang Theory Inc",
                 "Abbey Road, 1",
                 "Abbey Road, 2",
+                "Canada",
                 "Ontario",
                 "Toronto",
                 "123456",
