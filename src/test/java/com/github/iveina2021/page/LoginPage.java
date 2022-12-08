@@ -11,6 +11,19 @@ public class LoginPage {
 
     @FindBy(css = "div[class='signup-form'] h2")
     public SelenideElement newUserSignupLabel;
+
+    @FindBy(css = "div[class='login-form'] h2")
+    public SelenideElement loginToYourAccountLabel;
+
+    @FindBy(css = "input[data-qa='login-email']")
+    public SelenideElement loginEmailInput;
+
+    @FindBy(css = "input[data-qa='login-password']")
+    public SelenideElement loginPasswordInput;
+
+    @FindBy(css = "button[data-qa='login-button']")
+    public SelenideElement loginButton;
+
     @FindBy(css = "input[data-qa='signup-name']")
     public SelenideElement nameInput;
 
@@ -20,8 +33,15 @@ public class LoginPage {
     @FindBy(css = "button[data-qa='signup-button']")
     public SelenideElement signupButton;
 
+    @FindBy(xpath = "//p[contains(@style, 'color:')]")
+    public SelenideElement yourEmailPasswordIncorrect;
+
     public void checkNewUserSignUpLabelIsVisible() {
         newUserSignupLabel.should(Condition.exist);
+    }
+
+    public void checkLoginToYourAccountLabelIsVisible() {
+        loginToYourAccountLabel.should(Condition.exist);
     }
 
     public SignUpPage fillNewUserSignUpForm(String name, String email) {
@@ -29,5 +49,16 @@ public class LoginPage {
         emailInput.setValue(email);
         signupButton.click();
         return Selenide.page(SignUpPage.class);
+    }
+
+    public MainPage fillLoginUserForm(String loginEmail, String loginPassword) {
+        loginEmailInput.setValue(loginEmail);
+        loginPasswordInput.setValue(loginPassword);
+        loginButton.click();
+        return Selenide.page(MainPage.class);
+    }
+
+    public void checkYourEmailPasswordIncorrectTextIsVisible() {
+        yourEmailPasswordIncorrect.should(Condition.exist);
     }
 }
