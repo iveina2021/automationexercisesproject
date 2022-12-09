@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.page;
 // page_url = https://automationexercise.com/products
 
 public class AllProductsPage {
-    public SelenideElement allProductsLabel = $("h2[class$='text-center']");
+    public SelenideElement allProductsLabel = $(".features_items .title");
 
     public SelenideElement searchProductInput = $("input[id='search_product']");
 
@@ -19,8 +19,8 @@ public class AllProductsPage {
         allProductsLabel.should(Condition.exist);
     }
 
-    public SearchedProductsPage searchProduct(String product_name) {
-        searchProductInput.setValue(product_name);
+    public SearchedProductsPage searchProduct(String productName) {
+        searchProductInput.setValue(productName);
         submitSearchButton.click();
         return page(SearchedProductsPage.class);
     }

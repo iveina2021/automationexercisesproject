@@ -15,7 +15,7 @@ public class MainPage {
     @FindBy(css = "a[href='/delete_account']")
     public SelenideElement deleteAccountLink;
 
-    @FindBy(xpath = "//a[.//b]")
+    @FindBy(css = ".nav.navbar-nav a:has(.fa-user)")
     public SelenideElement loggedLink;
 
     @FindBy(css = "a[href='/logout']")

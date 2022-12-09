@@ -2,6 +2,7 @@ package com.github.iveina2021.helpers;
 
 public class Constants {
 
+    public static final String BASE_URL = "https://automationexercise.com";
     static final String NAME = "sheldon_cooper";
     static final String NAME_FOR_DELETE = "howard_wolowitz";
     static final String EMAIL = "sheldon_cooper123456@gmail.com";

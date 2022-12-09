@@ -1,5 +1,6 @@
 package com.github.iveina2021.api_test;
 
+import com.github.iveina2021.helpers.Constants;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
@@ -13,7 +14,7 @@ public class UpdateUserAccountTest {
 
     @BeforeEach
     public void setUp() {
-        RestAssured.baseURI = "https://automationexercise.com";
+        RestAssured.baseURI = Constants.BASE_URL;
     }
 
     @Test

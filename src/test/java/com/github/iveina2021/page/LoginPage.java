@@ -33,7 +33,7 @@ public class LoginPage {
     @FindBy(css = "button[data-qa='signup-button']")
     public SelenideElement signupButton;
 
-    @FindBy(xpath = "//p[contains(@style, 'color:')]")
+    @FindBy(css = ".login-form p")
     public SelenideElement yourEmailPasswordIncorrect;
 
     public void checkNewUserSignUpLabelIsVisible() {
