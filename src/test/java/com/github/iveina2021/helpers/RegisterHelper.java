@@ -1,9 +1,10 @@
 package com.github.iveina2021.helpers;
 
-import com.github.iveina2021.page.AccountCreatedPage;
-import com.github.iveina2021.page.LoginPage;
-import com.github.iveina2021.page.MainPage;
-import com.github.iveina2021.page.SignUpPage;
+import com.github.iveina2021.fixture.UserRequest;
+import com.github.iveina2021.pages.AccountCreatedPage;
+import com.github.iveina2021.pages.LoginPage;
+import com.github.iveina2021.pages.MainPage;
+import com.github.iveina2021.pages.SignUpPage;
 
 public class RegisterHelper {
 
@@ -56,4 +57,26 @@ public class RegisterHelper {
         accountCreatedPage.checkAccountCreatedLabelIsVisible();
         return accountCreatedPage;
     }
+
+    public static UserRequest.UserRequestBuilder createDefaultUserRequestBuilder() {
+        return UserRequest.builder()
+                .name("Leonard7")
+                .email("leo10@mail.ru")
+                .password("1234567")
+                .title("Mr")
+                .birthDate("24")
+                .birthMonth("5")
+                .birthYear("1990")
+                .firstname("Leonard")
+                .lastname("Hofstadter")
+                .company("Big Bang Theory Inc")
+                .address1("Abbey Road 1")
+                .address2("Abbey Road 2")
+                .country("Canada")
+                .zipcode("123456")
+                .state("Toronto")
+                .city("Ontario")
+                .mobileNumber("88009956677");
+    }
+
 }

@@ -1,7 +1,7 @@
-package com.github.iveina2021.ui_test;
+package com.github.iveina2021.ui.test;
 
 import com.github.iveina2021.helpers.SearchProductHelper;
-import com.github.iveina2021.page.MainPage;
+import com.github.iveina2021.pages.MainPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

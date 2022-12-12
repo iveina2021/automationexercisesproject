@@ -1,7 +1,7 @@
 package com.github.iveina2021.helpers;
 
-import com.github.iveina2021.page.LoginPage;
-import com.github.iveina2021.page.MainPage;
+import com.github.iveina2021.pages.LoginPage;
+import com.github.iveina2021.pages.MainPage;
 
 import java.util.UUID;
 

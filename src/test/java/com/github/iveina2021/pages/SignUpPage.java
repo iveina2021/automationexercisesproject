@@ -1,4 +1,4 @@
-package com.github.iveina2021.page;
+package com.github.iveina2021.pages;
 
 // page_url =  https://automationexercise.com/signup/
 

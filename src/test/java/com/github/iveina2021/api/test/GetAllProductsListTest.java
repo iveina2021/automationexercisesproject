@@ -1,4 +1,4 @@
-package com.github.iveina2021.api_test;
+package com.github.iveina2021.api.test;
 
 import com.github.iveina2021.helpers.Constants;
 import io.restassured.RestAssured;

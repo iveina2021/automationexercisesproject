@@ -1,4 +1,4 @@
-package com.github.iveina2021.page;
+package com.github.iveina2021.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;

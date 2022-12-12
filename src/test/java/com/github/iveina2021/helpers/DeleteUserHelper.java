@@ -1,8 +1,8 @@
 package com.github.iveina2021.helpers;
 
-import com.github.iveina2021.page.AccountCreatedPage;
-import com.github.iveina2021.page.AccountDeletedPage;
-import com.github.iveina2021.page.MainPage;
+import com.github.iveina2021.pages.AccountCreatedPage;
+import com.github.iveina2021.pages.AccountDeletedPage;
+import com.github.iveina2021.pages.MainPage;
 
 public class DeleteUserHelper {
 

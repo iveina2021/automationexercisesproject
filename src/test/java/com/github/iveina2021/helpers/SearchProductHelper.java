@@ -1,8 +1,8 @@
 package com.github.iveina2021.helpers;
 
-import com.github.iveina2021.page.AllProductsPage;
-import com.github.iveina2021.page.MainPage;
-import com.github.iveina2021.page.SearchedProductsPage;
+import com.github.iveina2021.pages.AllProductsPage;
+import com.github.iveina2021.pages.MainPage;
+import com.github.iveina2021.pages.SearchedProductsPage;
 
 import static com.codeborne.selenide.Selenide.page;
 
